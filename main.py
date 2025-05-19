@@ -1,3 +1,4 @@
+# main.py
 import streamlit as st
 import leafmap.foliumap as leafmap
 from forest_health import get_ndvi
