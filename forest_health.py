@@ -1,3 +1,4 @@
+# forest_health.py
 from odc.stac import load
 import planetary_computer
 import pystac_client
@@ -12,7 +13,12 @@ def get_ndvi(bbox, time_range=("2023-01-01", "2023-12-31")):
         query={"eo:cloud_cover": {"lt": 20}},
     )
     items = [planetary_computer.sign(item) for item in search.get_items()]
-    ds = load(items, bands=["red", "nir"], bbox=bbox, resolution=10, groupby="solar_day")
+    ds = load(
+        items,
+        bands=["red", "nir"],
+        bbox=bbox,
+        resolution=10,
+        groupby="solar_day"
+    ).persist()
     ndvi = (ds.nir - ds.red) / (ds.nir + ds.red)
-    ndvi = ndvi.median(dim="time")
-    return ndvi
+    return ndvi.median(dim="time")
