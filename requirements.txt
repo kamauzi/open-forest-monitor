@@ -1,26 +1,10 @@
-# Core Streamlit UI
-streamlit==1.35.0
-pandas==2.2.2
-plotly==5.21.0
-
-# Geospatial data handling
-xarray==2024.3.0
-rioxarray==0.15.5
-geopandas==0.14.4
-shapely==2.0.4
-fiona==1.9.6
-pyproj==3.6.1
-
-# STAC + ODC
-odc-stac==0.3.7
-odc-geo==0.4.2
-
-# Mapping and visualization
-folium==0.16.0
-pydeck==0.8.1b0
-
-# Utilities
-numpy==1.26.4
-requests==2.31.0
-tqdm==4.66.2
-
+streamlit
+odc-stac
+datacube
+xarray
+rasterio
+geopandas
+shapely
+matplotlib
+numpy
+pandas
