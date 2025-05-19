@@ -1,10 +1,9 @@
 streamlit
+leafmap
 odc-stac
-datacube
+pystac-client
+planetary-computer
 xarray
-rasterio
-geopandas
-shapely
-matplotlib
-numpy
-pandas
+rioxarray
+dask
+aiohttp
