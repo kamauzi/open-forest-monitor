@@ -4,6 +4,7 @@ import planetary_computer
 import pystac_client
 import xarray as xr
 
+@st.cache_data(show_spinner=True)
 def get_ndvi(bbox, time_range=("2023-01-01", "2023-12-31")):
     catalog = pystac_client.Client.open("https://planetarycomputer.microsoft.com/api/stac/v1")
     search = catalog.search(
