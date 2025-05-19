@@ -1,4 +1,6 @@
 # forest_health.py
+import streamlit as st  # ⬅️ This must be at the top
+
 from odc.stac import load
 import planetary_computer
 import pystac_client
